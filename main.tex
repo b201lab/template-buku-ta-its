@@ -1,0 +1,70 @@
+% Pengaturan ukuran teks dan bentuk halaman dua sisi
+\documentclass[10pt,twoside]{report}
+
+% Pengaturan ukuran halaman dan margin
+\usepackage[a5paper,top=25mm,left=25mm,right=20mm,bottom=25mm]{geometry}
+
+% Pengaturan ukuran spasi
+\usepackage[singlespacing]{setspace}
+
+% Judul dokumen
+\title{Buku Tugas Akhir ITS}
+\author{Musk, Elon Reeve}
+
+% Pengaturan format bahasa
+\usepackage[indonesian]{babel}
+
+% Pengaturan detail pada file PDF
+\usepackage[pdfauthor={\@author},bookmarksnumbered,pdfborder={0 0 0}]{hyperref}
+
+% Pengaturan jenis karakter
+\usepackage[utf8]{inputenc}
+
+% Pengaturan ukuran indentasi paragraf
+\setlength{\parindent}{2em}
+
+% Pengaturan ukuran spasi paragraf
+\setlength{\parskip}{0.5ex}
+
+% Package lainnya
+\usepackage{etoolbox} % Mengubah fungsi default
+\usepackage{enumitem} % Pembuatan list
+\usepackage{lipsum} % Pembuatan template kalimat
+\usepackage{graphicx} % Input gambar
+\usepackage{longtable} % Pembuatan tabel
+\usepackage[table,xcdraw]{xcolor} % Pewarnaan tabel
+\usepackage[numbers]{natbib} % Kutipan artikel
+\usepackage{eso-pic} % Pembuatan background
+\usepackage{changepage} % Pembuatan teks kolom
+\usepackage{wrapfig} % Wrapping gambar
+
+% Definisi untuk "Hati ini sengaja dikosongkan"
+\patchcmd{\cleardoublepage}{\hbox{}}{
+  \thispagestyle{empty}
+	\vspace*{\fill}
+	\begin{center}\textit{[Halaman ini sengaja dikosongkan]}\end{center}
+	\vfill}{}{}
+
+% Pengaturan penomoran halaman
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\fancyfoot[CE,CO]{\thepage}
+\patchcmd{\chapter}{plain}{fancy}{}{}
+\patchcmd{\chapter}{empty}{plain}{}{}
+
+% Isi keseluruhan dokumen
+\begin{document}
+
+  % Sampul luar
+  \input{sampul/sampul-luar.tex}
+
+  % Nomor halaman pembuka dimulai dari sini
+  \pagenumbering{roman}
+
+  % Sampul dalam
+  \input{sampul/sampul-dalam.tex}
+  \cleardoublepage
+
+\end{document}
