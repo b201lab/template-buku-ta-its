@@ -20,14 +20,9 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
-% Pengaturan ukuran indentasi paragraf
-\setlength{\parindent}{2em}
-
-% Pengaturan ukuran spasi paragraf
-\setlength{\parskip}{0.5ex}
-
 % Package lainnya
 \usepackage{etoolbox} % Mengubah fungsi default
+\usepackage{lmodern} % Penggunaan font modern
 \usepackage{enumitem} % Pembuatan list
 \usepackage{lipsum} % Pembuatan template kalimat
 \usepackage{graphicx} % Input gambar
@@ -66,5 +61,11 @@
   % Sampul dalam
   \input{sampul/sampul-dalam.tex}
   \cleardoublepage
+
+  % Pengaturan ukuran indentasi paragraf
+  \setlength{\parindent}{2em}
+
+  % Pengaturan ukuran spasi paragraf
+  \setlength{\parskip}{0.5ex}
 
 \end{document}
