@@ -50,6 +50,17 @@
 \patchcmd{\chapter}{plain}{fancy}{}{}
 \patchcmd{\chapter}{empty}{plain}{}{}
 
+% Pengaturan format judul bab
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\bfseries\Large}{BAB \centering\Roman{chapter}}{0ex}{\vspace{0ex}\centering}
+\titleformat{\section}{\bfseries\large}{\MakeUppercase{\thesection}}{1ex}{\vspace{1ex}}
+\titleformat{\subsection}{\bfseries\large}{\MakeUppercase{\thesubsection}}{1ex}{}
+\titleformat{\subsubsection}{\bfseries\large}{\MakeUppercase{\thesubsubsection}}{1ex}{}
+\titlespacing{\chapter}{0ex}{0ex}{4ex}
+\titlespacing{\section}{0ex}{1ex}{0ex}
+\titlespacing{\subsection}{0ex}{0.5ex}{0ex}
+\titlespacing{\subsubsection}{0ex}{0.5ex}{0ex}
+
 % Isi keseluruhan dokumen
 \begin{document}
 
@@ -87,6 +98,13 @@
 
   % Kata pengantar
   \input{lainnya/kata-pengantar.tex}
+  \cleardoublepage
+
+  % Nomor halaman isi dimulai dari sini
+  \pagenumbering{arabic}
+
+  % Bab 1 pendahuluan
+  \input{bab/1-pendahuluan.tex}
   \cleardoublepage
 
 \end{document}
