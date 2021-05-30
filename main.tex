@@ -32,6 +32,7 @@
 \usepackage{eso-pic} % Pembuatan background
 \usepackage{changepage} % Pembuatan teks kolom
 \usepackage{wrapfig} % Wrapping gambar
+\usepackage{tabularx}
 
 % Definisi untuk "Hati ini sengaja dikosongkan"
 \patchcmd{\cleardoublepage}{\hbox{}}{
@@ -55,9 +56,6 @@
   % Sampul luar
   \input{sampul/sampul-luar.tex}
 
-  % Nomor halaman pembuka dimulai dari sini
-  \pagenumbering{roman}
-
   % Sampul dalam
   \input{sampul/sampul-dalam.tex}
   \cleardoublepage
@@ -70,6 +68,10 @@
 
   % Pernyataan keaslian
   \input{lainnya/pernyataan-keaslian.tex}
+  \cleardoublepage
+
+  % Lembar pengesahan
+  \input{lainnya/lembar-pengesahan.tex}
   \cleardoublepage
 
 \end{document}
