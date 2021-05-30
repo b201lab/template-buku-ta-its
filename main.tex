@@ -100,6 +100,12 @@
   \input{lainnya/kata-pengantar.tex}
   \cleardoublepage
 
+  % Daftar isi
+  \renewcommand*\contentsname{DAFTAR ISI}
+  \addcontentsline{toc}{chapter}{\contentsname}
+  \tableofcontents
+  \cleardoublepage
+
   % Nomor halaman isi dimulai dari sini
   \pagenumbering{arabic}
 
