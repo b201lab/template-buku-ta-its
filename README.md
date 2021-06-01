@@ -1,6 +1,7 @@
 # Template LaTeX Buku Tugas Akhir ITS
 
 [![latest version](https://img.shields.io/github/v/release/b201lab/template-buku-ta-its)](https://github.com/b201lab/template-buku-ta-its/releases/)
+[![commits since latest version](https://img.shields.io/github/commits-since/b201lab/template-buku-ta-its/latest)](https://github.com/b201lab/template-buku-ta-its/commits/master)
 [![repo size](https://img.shields.io/github/repo-size/b201lab/template-buku-ta-its)](https://github.com/b201lab/template-buku-ta-its)
 [![license](https://img.shields.io/github/license/b201lab/template-buku-ta-its)](./LICENSE)
 [![build document status](https://img.shields.io/github/workflow/status/b201lab/template-buku-ta-its/Build%20Document)](https://github.com/b201lab/template-buku-ta-its/actions)
@@ -11,6 +12,8 @@ Template yang dibuat saat ini baru mengikuti aturan yang diberlakukan oleh [Depa
 Sehingga, secara penuh template ini belum mewakili aturan yang berlaku secara umum di setiap departemen yang ada di ITS.
 
 > Perlu diketahui, template ini bukanlah template resmi yang dikeluarkan oleh ITS maupun departemen-departemen yang ada di bawah naungan ITS.
+
+> Lihat halaman [Release](https://github.com/b201lab/template-buku-ta-its/releases) untuk hasil PDF dari template ini, atau klik di [sini](https://github.com/b201lab/template-buku-ta-its/releases/download/v1.0/main.pdf).
 
 ## Fitur
 
