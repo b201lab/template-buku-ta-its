@@ -3,6 +3,7 @@
 [![latest version](https://img.shields.io/github/v/release/b201lab/template-buku-ta-its)](https://github.com/b201lab/template-buku-ta-its/releases/)
 [![repo size](https://img.shields.io/github/repo-size/b201lab/template-buku-ta-its)](https://github.com/b201lab/template-buku-ta-its)
 [![license](https://img.shields.io/github/license/b201lab/template-buku-ta-its)](./LICENSE)
+[![build document status](https://img.shields.io/github/workflow/status/b201lab/template-buku-ta-its/Build%20Document)](https://github.com/b201lab/template-buku-ta-its/actions)
 
 Repositori ini berisi template [LaTeX](https://www.latex-project.org/) dari buku tugas akhir yang disesuaikan dengan format yang diberlakukan oleh [Institut Teknologi Sepuluh Nopember](https://www.its.ac.id/) (ITS).
 Template ini terinspirasi dari repositori [rohwid/id-thesis-book-min-electics-its](https://github.com/rohwid/id-thesis-book-min-electics-its) dengan perubahan yang menyesuaikan kebutuhan pembukuan tugas akhir strata sarjana serta dengan pemangkasan isi.

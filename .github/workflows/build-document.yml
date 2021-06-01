@@ -1,16 +1,16 @@
-name: Build LaTeX document
+name: Build Document
 on:
   pull_request:
     branches: [ main ]
   push:
     branches: [ main ]
 jobs:
-  build-latex-document:
+  build-document:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.4
-      - name: Compile LaTeX document
+      - name: Compile document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
