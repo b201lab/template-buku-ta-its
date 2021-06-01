@@ -61,6 +61,28 @@
 \titlespacing{\subsection}{0ex}{0.5ex}{0ex}
 \titlespacing{\subsubsection}{0ex}{0.5ex}{0ex}
 
+% Pengaturan format potongan kode
+\usepackage{listings}
+\definecolor{comment}{RGB}{0,128,0}
+\definecolor{string}{RGB}{255,0,0}
+\definecolor{keyword}{RGB}{0,0,255}
+\lstdefinestyle{codestyle}{
+  commentstyle=\color{comment},
+  stringstyle=\color{string},
+  keywordstyle=\color{keyword},
+  basicstyle=\footnotesize\ttfamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  frame=lines,
+  breaklines=true,
+  prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  showstringspaces=false,
+  upquote=true,
+  tabsize=2,
+}
+\lstset{style=codestyle}
+
 % Isi keseluruhan dokumen
 \begin{document}
 
@@ -115,6 +137,10 @@
 
   % Bab 2 tinjauan pustaka
   \input{bab/2-tinjauan-pustaka.tex}
+  \cleardoublepage
+
+  % Bab 3 desain dan implementasi
+  \input{bab/3-desain-implementasi.tex}
   \cleardoublepage
 
   % Daftar pustaka
