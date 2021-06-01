@@ -1,3 +1,7 @@
+% Judul dokumen
+\title{Buku Tugas Akhir ITS}
+\author{Musk, Elon Reeve}
+
 % Pengaturan ukuran teks dan bentuk halaman dua sisi
 \documentclass[10pt,twoside]{report}
 
@@ -6,10 +10,6 @@
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
-
-% Judul dokumen
-\title{Buku Tugas Akhir ITS}
-\author{Musk, Elon Reeve}
 
 % Pengaturan format bahasa
 \usepackage[indonesian]{babel}
@@ -20,19 +20,23 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
+% Pengaturan pewarnaan
+\usepackage[table,xcdraw]{xcolor}
+
+% Pengaturan kutipan artikel
+\usepackage[numbers]{natbib}
+
 % Package lainnya
-\usepackage{etoolbox} % Mengubah fungsi default
-\usepackage{lmodern} % Penggunaan font modern
-\usepackage{enumitem} % Pembuatan list
-\usepackage{lipsum} % Pembuatan template kalimat
-\usepackage{graphicx} % Input gambar
-\usepackage{longtable} % Pembuatan tabel
-\usepackage[table,xcdraw]{xcolor} % Pewarnaan tabel
-\usepackage[numbers]{natbib} % Kutipan artikel
-\usepackage{eso-pic} % Pembuatan background
-\usepackage{changepage} % Pembuatan teks kolom
-\usepackage{wrapfig} % Wrapping gambar
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{eso-pic}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{lmodern}
+\usepackage{longtable}
 \usepackage{tabularx}
+\usepackage{wrapfig}
 
 % Definisi untuk "Hati ini sengaja dikosongkan"
 \patchcmd{\cleardoublepage}{\hbox{}}{
