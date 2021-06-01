@@ -5,7 +5,7 @@
 
     % Ubah nilai berikut jika posisi vertikal background tidak sesuai
     \raisebox{0mm}{
-      \includegraphics[width=\paperwidth,height=\paperheight]{sampul/sampul-dalam.png}
+      \includegraphics[width=\paperwidth,height=\paperheight]{sampul/gambar/sampul-dalam.png}
     }
   }
 }
@@ -14,40 +14,23 @@
 \thispagestyle{empty}
 
 % Pengaturan margin untuk menyesuaikan konten sampul
-\newgeometry{top=95mm,left=25mm,right=20mm,bottom=25mm}
+\newgeometry{
+  top=95mm,
+  left=25mm,
+  right=20mm,
+  bottom=25mm
+}
 
 \begin{flushleft}
 
-  % Pengaturan jenis teks yang digunakan
+  % Pemilihan font sans serif
   \sffamily
 
-  % Ubah penomoran buku berikut sesuai dengan yang ditentukan oleh departemen
-  \noindent\textbf{TUGAS AKHIR - TD123456}
-  \vspace{6ex}
+  % Pemilihan font bold
+  \fontseries{bx}
+  \selectfont
 
-  % Ubah kalimat berikut sesuai dengan judul tugas akhir
-  \noindent{\large \textbf{KALKULASI ENERGI PADA ROKET LUAR ANGKASA BERBASIS \emph{ANTI GRAVITASI}}}
-  \vspace{4ex}
-
-  % Ubah kalimat berikut sesuai dengan nama mahasiswa
-  \noindent\textbf{Elon Reeve Musk} \\
-  % Ubah kalimat berikut sesuai dengan NRP mahasiswa
-  \textbf{NRP 0123 20 4000 0001}
-  \vspace{2ex}
-
-  \noindent\textbf{Dosen Pembimbing} \\
-  % Ubah kalimat berikut sesuai dengan nama-nama dosen pembimbing
-  \textbf{Nikola Tesla, S.T., M.T.} \\
-  \textbf{Wernher von Braun, S.T., M.T.}
-  \vspace{6ex}
-
-  % Ubah kalimat berikut sesuai dengan nama departemen
-  \noindent\textbf{DEPARTEMEN TEKNIK DIRGANTARA} \\
-  % Ubah kalimat berikut sesuai dengan nama fakultas
-  \textbf{Fakultas Teknologi Dirgantara} \\
-  \textbf{Institut Teknologi Sepuluh Nopember} \\
-  % Ubah kalimat berikut sesuai dengan tempat dan tahun pembuatan buku
-  \textbf{Surabaya 2021}
+  \input{sampul/konten.tex}
 
 \end{flushleft}
 

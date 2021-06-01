@@ -1,3 +1,7 @@
+% Judul dokumen
+\title{Buku Tugas Akhir ITS}
+\author{Musk, Elon Reeve}
+
 % Pengaturan ukuran teks dan bentuk halaman dua sisi
 \documentclass[10pt,twoside]{report}
 
@@ -6,10 +10,6 @@
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
-
-% Judul dokumen
-\title{Buku Tugas Akhir ITS}
-\author{Musk, Elon Reeve}
 
 % Pengaturan format bahasa
 \usepackage[indonesian]{babel}
@@ -20,23 +20,23 @@
 % Pengaturan jenis karakter
 \usepackage[utf8]{inputenc}
 
-% Pengaturan ukuran indentasi paragraf
-\setlength{\parindent}{2em}
+% Pengaturan pewarnaan
+\usepackage[table,xcdraw]{xcolor}
 
-% Pengaturan ukuran spasi paragraf
-\setlength{\parskip}{0.5ex}
+% Pengaturan kutipan artikel
+\usepackage[numbers]{natbib}
 
 % Package lainnya
-\usepackage{etoolbox} % Mengubah fungsi default
-\usepackage{enumitem} % Pembuatan list
-\usepackage{lipsum} % Pembuatan template kalimat
-\usepackage{graphicx} % Input gambar
-\usepackage{longtable} % Pembuatan tabel
-\usepackage[table,xcdraw]{xcolor} % Pewarnaan tabel
-\usepackage[numbers]{natbib} % Kutipan artikel
-\usepackage{eso-pic} % Pembuatan background
-\usepackage{changepage} % Pembuatan teks kolom
-\usepackage{wrapfig} % Wrapping gambar
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{eso-pic}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{wrapfig}
 
 % Definisi untuk "Hati ini sengaja dikosongkan"
 \patchcmd{\cleardoublepage}{\hbox{}}{
@@ -54,17 +54,128 @@
 \patchcmd{\chapter}{plain}{fancy}{}{}
 \patchcmd{\chapter}{empty}{plain}{}{}
 
+% Pengaturan format judul bab
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\bfseries\Large}{BAB \centering\Roman{chapter}}{0ex}{\vspace{0ex}\centering}
+\titleformat{\section}{\bfseries\large}{\MakeUppercase{\thesection}}{1ex}{\vspace{1ex}}
+\titleformat{\subsection}{\bfseries\large}{\MakeUppercase{\thesubsection}}{1ex}{}
+\titleformat{\subsubsection}{\bfseries\large}{\MakeUppercase{\thesubsubsection}}{1ex}{}
+\titlespacing{\chapter}{0ex}{0ex}{4ex}
+\titlespacing{\section}{0ex}{1ex}{0ex}
+\titlespacing{\subsection}{0ex}{0.5ex}{0ex}
+\titlespacing{\subsubsection}{0ex}{0.5ex}{0ex}
+
+% Pengaturan format potongan kode
+\usepackage{listings}
+\definecolor{comment}{RGB}{0,128,0}
+\definecolor{string}{RGB}{255,0,0}
+\definecolor{keyword}{RGB}{0,0,255}
+\lstdefinestyle{codestyle}{
+  commentstyle=\color{comment},
+  stringstyle=\color{string},
+  keywordstyle=\color{keyword},
+  basicstyle=\footnotesize\ttfamily,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  frame=lines,
+  breaklines=true,
+  prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  showstringspaces=false,
+  upquote=true,
+  tabsize=2,
+}
+\lstset{style=codestyle}
+
 % Isi keseluruhan dokumen
 \begin{document}
 
   % Sampul luar
   \input{sampul/sampul-luar.tex}
 
+  % Sampul dalam
+  \input{sampul/sampul-dalam.tex}
+  \cleardoublepage
+
+  % Pengaturan ukuran indentasi paragraf
+  \setlength{\parindent}{2em}
+
+  % Pengaturan ukuran spasi paragraf
+  \setlength{\parskip}{1ex}
+
+  % Pernyataan keaslian
+  \input{lainnya/pernyataan-keaslian.tex}
+  \cleardoublepage
+
+  % Lembar pengesahan
+  \input{lainnya/lembar-pengesahan.tex}
+  \cleardoublepage
+
   % Nomor halaman pembuka dimulai dari sini
   \pagenumbering{roman}
 
-  % Sampul dalam
-  \input{sampul/sampul-dalam.tex}
+  % Abstrak Bahasa Indonesia
+  \input{abstrak/abstrak-id.tex}
+  \cleardoublepage
+
+  % Abstrak Bahasa Inggris
+  \input{abstrak/abstrak-en.tex}
+  \cleardoublepage
+
+  % Kata pengantar
+  \input{lainnya/kata-pengantar.tex}
+  \cleardoublepage
+
+  % Daftar isi
+  \renewcommand*\contentsname{DAFTAR ISI}
+  \addcontentsline{toc}{chapter}{\contentsname}
+  \tableofcontents
+  \cleardoublepage
+
+  % Daftar gambar
+  \renewcommand*\listfigurename{DAFTAR GAMBAR}
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
+  \cleardoublepage
+
+  % Daftar tabel
+  \renewcommand*\listtablename{DAFTAR TABEL}
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
+  \cleardoublepage
+
+  % Nomor halaman isi dimulai dari sini
+  \pagenumbering{arabic}
+
+  % Bab 1 pendahuluan
+  \input{bab/1-pendahuluan.tex}
+  \cleardoublepage
+
+  % Bab 2 tinjauan pustaka
+  \input{bab/2-tinjauan-pustaka.tex}
+  \cleardoublepage
+
+  % Bab 3 desain dan implementasi
+  \input{bab/3-desain-implementasi.tex}
+  \cleardoublepage
+
+  % Bab 4 pengujian dan analisis
+  \input{bab/4-pengujian-analisis.tex}
+  \cleardoublepage
+
+  % Bab 5 penutup
+  \input{bab/5-penutup.tex}
+  \cleardoublepage
+
+  % Daftar pustaka
+  \renewcommand\bibname{DAFTAR PUSTAKA}
+  \addcontentsline{toc}{chapter}{\bibname}
+  \bibliographystyle{unsrtnat}
+  \bibliography{pustaka/pustaka.bib}
+  \cleardoublepage
+
+  % Biografi penulis
+  \input{lainnya/biografi-penulis.tex}
   \cleardoublepage
 
 \end{document}
