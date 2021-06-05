@@ -13,7 +13,7 @@ Sehingga, secara penuh template ini belum mewakili aturan yang berlaku secara um
 
 > Perlu diketahui, template ini bukanlah template resmi yang dikeluarkan oleh ITS maupun departemen-departemen yang ada di bawah naungan ITS.
 
-> Lihat halaman [Release](https://github.com/b201lab/template-buku-ta-its/releases) untuk hasil PDF dari template ini, atau klik di [sini](https://github.com/b201lab/template-buku-ta-its/releases/download/v1.0/main.pdf).
+> Lihat halaman [Release](https://github.com/b201lab/template-buku-ta-its/releases) untuk hasil PDF dari template ini, atau klik di [sini](https://github.com/b201lab/template-buku-ta-its/releases/download/v1.1/main.pdf).
 
 ## Fitur
 
