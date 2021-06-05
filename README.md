@@ -41,6 +41,11 @@ Selain file `main.tex`, ada juga beberapa bagian lain dari template ini yang bis
 
 > Penjelasan lebih lanjut mengenai penggunaan template ini akan dijelaskan dengan comment yang tersedia pada setiap file yang ada.
 
+## Contoh Penggunaan Template
+
+Berikut adalah daftar repositori lain yang menggunakan template yang berasal dari repositori ini:
+- [threeal/buku-ta-simulasi-robot](https://github.com/threeal/buku-ta-simulasi-robot).
+
 ## Lisensi
 
 Kode sumber yang ada pada repositori ini dilisensikan di bawah [Lisensi MIT](./LICENSE).
