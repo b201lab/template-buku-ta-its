@@ -45,6 +45,7 @@ Selain file `main.tex`, ada juga beberapa bagian lain dari template ini yang bis
 
 Berikut adalah daftar repositori lain yang menggunakan template yang berasal dari repositori ini:
 - [threeal/buku-ta-simulasi-robot](https://github.com/threeal/buku-ta-simulasi-robot).
+- [chillytaka/last_boss](https://github.com/chillytaka/last_boss).
 
 ## Lisensi
 
