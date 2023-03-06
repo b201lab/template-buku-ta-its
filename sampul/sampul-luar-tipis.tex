@@ -5,7 +5,7 @@
 
     % Ubah nilai berikut jika posisi vertikal background tidak sesuai
     \raisebox{0mm}{
-      \includegraphics[width=\paperwidth,height=\paperheight]{sampul/gambar/sampul-luar.png}
+      \includegraphics[width=\paperwidth,height=\paperheight]{sampul/gambar/sampul-luar-tipis.png}
     }
   }
 }
@@ -15,9 +15,9 @@
 
 % Pengaturan margin untuk menyesuaikan konten sampul
 \newgeometry{
-  top=55mm,
+  top=65mm,
   left=30mm,
-  right=20mm,
+  right=30mm,
   bottom=20mm
 }
 
@@ -26,14 +26,12 @@
   % Pemilihan font sans serif
   \sffamily
 
-  % Pemilihan warna font putih
-  \color{white}
-
   % Pemilihan font bold
   \fontseries{bx}
   \selectfont
-
-  \input{\covercontents}
+  \begin{spacing}{1.5}
+    \input{\covercontents}
+  \end{spacing}
 
 \end{flushleft}
 

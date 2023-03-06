@@ -3,10 +3,10 @@
 \author{Musk, Elon Reeve}
 
 % Pengaturan ukuran teks dan bentuk halaman dua sisi
-\documentclass[10pt,twoside]{report}
+\documentclass[12pt,twoside]{report}
 
 % Pengaturan ukuran halaman dan margin
-\usepackage[a5paper,top=25mm,left=25mm,right=20mm,bottom=25mm]{geometry}
+\usepackage[a4paper,top=30mm,left=30mm,right=20mm,bottom=25mm]{geometry}
 
 % Pengaturan ukuran spasi
 \usepackage[singlespacing]{setspace}
@@ -33,7 +33,8 @@
 \usepackage{etoolbox}
 \usepackage{graphicx}
 \usepackage{lipsum}
-\usepackage{lmodern}
+% \usepackage{lmodern}
+\usepackage{txfonts}
 \usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{wrapfig}
@@ -93,6 +94,8 @@
   % Sampul luar Bahasa Indonesia
   \newcommand\covercontents{sampul/konten-id.tex}
   \input{sampul/sampul-luar.tex}
+
+  \input{sampul/sampul-luar-tipis.tex}
 
   % Atur ulang penomoran halaman
   \setcounter{page}{1}
