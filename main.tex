@@ -51,6 +51,38 @@
 \patchcmd{\chapter}{plain}{fancy}{}{}
 \patchcmd{\chapter}{empty}{plain}{}{}
 
+% Command untuk bulan
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or Januari% 1
+  \or Februari% 2
+  \or Maret% 3
+  \or April% 4
+  \or Mei% 5
+  \or Juni% 6
+  \or Juli% 7
+  \or Agustus% 8
+  \or September% 9
+  \or Oktober% 10
+  \or November% 11
+  \or Desember% 12
+  \fi}
+\newcommand{\ENGMONTH}{%
+  \ifcase\the\month
+  \or January% 1
+  \or February% 2
+  \or March% 3
+  \or April% 4
+  \or May% 5
+  \or June% 6
+  \or July% 7
+  \or August% 8
+  \or September% 9
+  \or October% 10
+  \or November% 11
+  \or December% 12
+  \fi}
+
 % Pengaturan format judul bab
 \usepackage{titlesec}
 \titleformat{\chapter}[display]{\bfseries\Large}{BAB \centering\Roman{chapter}}{0ex}{\vspace{0ex}\centering}

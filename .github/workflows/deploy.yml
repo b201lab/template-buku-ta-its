@@ -1,25 +1,25 @@
 name: deploy
 on:
-    workflow_dispatch:
-    push:
-        branches: [main]
+  workflow_dispatch:
+  push:
+    branches: [main]
 jobs:
-    latex-document:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout this repository
-              uses: actions/checkout@v3.2.0
+  latex-document:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v3.2.0
 
-            - name: Compile LaTeX document
-              uses: xu-cheng/latex-action@v2
-              with:
-                  root_file: main.tex
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
 
-            - name: Move and rename document
-              run: mkdir pages && mv main.pdf pages/buku-ta.pdf
+      - name: Move and rename document
+        run: mkdir pages && mv main.pdf pages/buku-ta.pdf
 
-            - name: Deploy document to GitHub pages
-              uses: JamesIves/github-pages-deploy-action@v4.4.1
-              with:
-                  branch: gh-pages
-                  folder: pages
+      - name: Deploy document to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: gh-pages
+          folder: pages
