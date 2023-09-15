@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4.0.0
 
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@3.0.1
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
 
