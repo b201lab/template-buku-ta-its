@@ -21,7 +21,7 @@ jobs:
         uses: actions/configure-pages@v3.0.6
 
       - name: Checkout this repository
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v4
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@3.0.1
