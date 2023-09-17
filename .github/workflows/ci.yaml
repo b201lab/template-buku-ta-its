@@ -1,15 +1,16 @@
-name: build
+name: CI
 on:
   workflow_dispatch:
   push:
 jobs:
-  build-document:
+  compile:
+    name: Compile
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout this repository
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4.0.0
 
-      - name: Compile document in LaTeX
+      - name: Compile document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
@@ -17,8 +18,8 @@ jobs:
       - name: Rename document
         run: mv main.pdf buku-ta.pdf
 
-      - name: Upload document as an artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: document
           path: buku-ta.pdf
