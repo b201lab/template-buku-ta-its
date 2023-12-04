@@ -42,7 +42,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Configure Pages
-        uses: actions/configure-pages@v3.0.6
+        uses: actions/configure-pages@v4.0.0
 
       - name: Deploy to Pages
         id: deployment
